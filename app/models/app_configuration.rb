@@ -35,7 +35,6 @@ class AppConfiguration < Configuration
   preference :admin_interface_logo, :string, :default => "spree/spree.jpg"
   preference :allow_ssl_in_production, :boolean, :default => true
   preference :allow_ssl_in_development_and_test, :boolean, :default => false
-  preference :google_analytics_id, :string, :default => '12312312' # Replace with real Google Analytics Id 
   preference :allow_guest_checkout, :boolean, :default => true 
   preference :allow_anonymous_checkout, :boolean, :default => false 
   preference :alternative_billing_phone,  :boolean, :default => false # Request extra phone for bill addr
@@ -43,10 +42,12 @@ class AppConfiguration < Configuration
   preference :shipping_instructions,      :boolean, :default => false # Request instructions/info for shipping 
   preference :show_price_inc_vat, :boolean, :default => false 
   preference :auto_capture, :boolean, :default => false # automatically capture the creditcard (as opposed to just authorize and capture later)
-  preference :address_requires_state, :boolean, :default => true # should state/state_name be required
+  preference :address_requires_state, :boolean, :default => false # should state/state_name be required
   preference :use_mail_queue, :boolean, :default => false #send mail immediately or use a mail queue.
   preference :allow_openid, :boolean, :default => true # allow use OpenID for registrations        
   preference :checkout_zone, :string, :default => nil # replace with the name of a zone if you would like to limit the countries
+  preference :always_put_site_name_in_title, :boolean, :default => true
+  
   validates_presence_of :name
   validates_uniqueness_of :name
   

@@ -12,6 +12,9 @@ class Shipment < ActiveRecord::Base
 
   attr_accessor :special_instructions
   accepts_nested_attributes_for :address
+  accepts_nested_attributes_for :inventory_units
+
+  validates_presence_of :inventory_units, :if => Proc.new { |unit| !unit.order.in_progress? }
 
   def shipped=(value)
     return unless value == "1" && shipped_at.nil?
@@ -46,11 +49,11 @@ class Shipment < ActiveRecord::Base
 
     after_transition :to => 'shipped', :do => :transition_order
   end
-  
+
   def editable_by?(user)
     !shipped?
   end
-  
+
   def manifest
     inventory_units.group_by(&:variant).map do |i|
       OpenStruct.new(:variant => i.first, :quantity => i.last.length)
@@ -72,12 +75,14 @@ class Shipment < ActiveRecord::Base
   def recalculate_order
     shipping_charge.update_attribute(:description, description_for_shipping_charge)
     order.update_adjustments
+    order.update_totals!
     order.save
   end
 
   private
 
   def generate_shipment_number
+    return self.number unless self.number.blank?
     record = true
     while record
       random = Array.new(11){rand(9)}.join
@@ -94,6 +99,12 @@ class Shipment < ActiveRecord::Base
     update_attribute(:shipped_at, Time.now)
     # transition order to shipped if all shipments have been shipped
     order.ship! if order.shipments.all?(&:shipped?)
+  end
+
+  def validate
+    unless shipping_method.nil?
+      errors.add :shipping_method, I18n.t("is_not_available_to_shipment_address") unless shipping_method.zone.include?(address)
+    end
   end
 
 end

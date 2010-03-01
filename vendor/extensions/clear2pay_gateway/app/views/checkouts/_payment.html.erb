@@ -1,0 +1,40 @@
+<fieldset id='payment' style="width:70%;">
+
+Checkout with clear to pay
+<%#= debug(@clear2pay_gateway) %>
+<input type="text" readonly="1" name="TIA" value="1023,25" />
+<input type="hidden" name="TIA" value="1023,25" />
+<form action="https://clearpark.testarea.tectrade.net/Redirect/Pay.aspx" method="post">
+<input type="hidden" name="CPID" value="861145C8-2243-44F2-8E26-67A2DE628BA7" />
+<input type="hidden" name="ORDID" value="10001" />
+<input type="hidden" name="CURCODE" value="EUR" />
+<input type="hidden" name="TIA" value="1023,25" />
+<input type="hidden" name="URLOK" value="https://clearpark.testarea.tectrade.net/Redirect/DemoPaymentOK.html" />
+<input type="hidden" name="URLNOK" value="https://clearpark.testarea.tectrade.net/Redirect/DemoPaymentFailed.html" />
+<input type="hidden" name="FIRSTNAME" value="Jack" />
+<input type="hidden" name="LASTNAME" value="Russel" />
+<input type="hidden" name="STREET" value="Doggystreet 101" />
+<input type="hidden" name="CITY" value="DoggyTown" />
+<input type="hidden" name="ZIPCODE" value="101" />
+<input type="hidden" name="COUNTRY" value="Belgium" />
+<input type="hidden" name="DESC" value="Description of order" />
+<input type="hidden" name="LANG" value="EN" />
+<input type="hidden" name="PAYMENTSELECTION" value="CreditCard" />
+<input type="submit" value="Click here to pay!" />
+</form>
+
+
+
+</fieldset>
+
+<fieldset id="order_details">
+  <div class="clear"></div>
+  <legend><%= t("confirm") %></legend>
+  <%= render :partial => 'shared/order_details', :locals => {:order => @order} -%>
+</fieldset>
+
+<hr />
+
+<div class="form-buttons">
+  <input type="submit" class="continue button primary" value="<%=t("save_and_continue") %>"/>
+</div>

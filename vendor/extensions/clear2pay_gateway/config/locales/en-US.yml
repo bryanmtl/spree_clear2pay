@@ -1,5 +1,8 @@
 ---
 en-US:
   url: URL
+  redirect_success: Success Redirect URL
+  redirect_fail: Failure Redirect URL
+  cpid: CPID
   checkout_steps:
     clearpay: Payment

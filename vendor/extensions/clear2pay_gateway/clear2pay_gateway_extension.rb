@@ -27,24 +27,29 @@ class Clear2payGatewayExtension < Spree::Extension
     
     AppConfiguration.class_eval do
       preference :enable_clear2pay, :boolean, :default => true
+      preference :address_requires_state, :boolean, :default => true
     end
     
   
     # customize the checkout state machine
-    Checkout.state_machines[:state] = StateMachine::Machine.new(Checkout, :initial => 'address') do
-      after_transition :to => 'complete', :do => :complete_order
-      before_transition :to => 'complete', :do => :process_payment
-      event :next do
-        transition :to => 'delivery', :from  => 'address'
-        transition :to => 'clearpay', :from => 'delivery'
-        transition :to => 'complete', :from => 'clearpay'
-      end
-    end
+    # Checkout.state_machines[:state] = StateMachine::Machine.new(Checkout, :initial => 'address') do
+    #       after_transition :to => 'complete', :do => :complete_order
+    #       before_transition :to => 'complete', :do => :process_payment
+    #       event :next do
+    #         transition :to => 'delivery', :from  => 'address'
+    #         transition :to => 'clearpay', :from => 'delivery'
+    #         transition :to => 'complete', :from => 'clearpay'
+    #       end
+    #     end
     
     
     CheckoutsController.class_eval do
       # include this to enable Clear2pay checkout functions
-    
+      before_filter :set_clear2pay_gateway
+      
+      def set_clear2pay_gateway
+        @clear2pay_gateway ||= Gateway.current
+      end
       
     end
 
@@ -62,8 +67,9 @@ class Clear2payGatewayExtension < Spree::Extension
     #   end
     
     # make your helper avaliable in all views
-    # Spree::BaseController.class_eval do
-    #   helper YourHelper
-    # end
+    Spree::BaseController.class_eval do
+        # helper YourHelper
+        
+    end
   end
 end

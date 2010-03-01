@@ -84,6 +84,8 @@ mx:
         presentation: "Presentación"
       prototype: 
         name: Nombre
+      return_authorization:
+        amount: Amount
       role: 
         name: Nombre
       state: 
@@ -117,6 +119,9 @@ mx:
       address: 
         one: "Dirección"
         other: Direcciones
+      cheque_payment:
+        one: Cheque Payment
+        other: Cheque Payments
       country: 
         one: "País"
         other: Paises
@@ -150,6 +155,9 @@ mx:
       prototype: 
         one: Prototipo
         other: Prototipos
+      return_authorization:
+        one: Return Authorization
+        other: Return Authorizations
       role: 
         one: "Función"
         other: Funciones
@@ -209,6 +217,7 @@ mx:
   already_registered: "¿Ya estas registrado?"
   alternative_phone: "Teléfono alternativo"
   amount: Cantidad
+  analytics_trackers: Analytics Trackers
   are_you_sure: "¿Está seguro?"
   are_you_sure_category: "¿Está seguro de que quiere eliminar esta categoría?"
   are_you_sure_delete: "¿Está seguro de que quiere eliminar esta entrada?"
@@ -221,8 +230,10 @@ mx:
   authorized: Autorizado
   available_on: "Disponible desde"
   available_taxons: "Taxones disponibles"
+  awaiting_return: Awaiting Return
   back: "Atrás"
   back_to_store: "Volver a la tienda"
+  backordered: Backordered
   backordering_is_allowed: "Devoluciones {{not}} permitidas"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
@@ -238,8 +249,10 @@ mx:
   calculator_settings_warning: "Si quieres cambiar el tipo de calculadora, debes guardar primero antes de poder editar las propiedades de la calculadora"
   cancel: Cancelar
   canceled: Cancelado
+  cannot_create_returns: Cannot create returns as this order has not shipped yet.
   capture: Cobrar
   card_code: "Código de la tarjeta"
+  card_details: "Card details"
   card_number: "Número de tarjeta"
   card_type_is: "El tipo de tarjeta es"
   cart: Carrito
@@ -247,6 +260,7 @@ mx:
   category: "Categoría"
   change: Cambiar
   change_language: "Cambiar Idioma"
+  change_my_password: "Change my password"
   charge_total: "Cargo total"
   charged: Cargado
   charges: Charges
@@ -257,6 +271,7 @@ mx:
     complete: Complete
     delivery: Delivery
     payment: Payment
+  cheque: Cheque
   city: Ciudad
   clone: Clone
   code: "Código"
@@ -276,6 +291,7 @@ mx:
   copy_all_mails_to: Copiar todos los correos a
   cost_price: "Cost Price"
   count: Count
+  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
   country: "País"
   country_based: "País base"
   coupon: "Cupón"                                                                             
@@ -286,18 +302,22 @@ mx:
   create_a_new_account: "Crear cuenta nueva"
   create_user_account: "Crear cuenta de usuario"
   created_successfully: "Creado correctamente"
+  credit: Credit
   credit_card: "Tarjeta de credito"
   credit_card_capture_complete: "La tarjeta de crédito ha sido registrada"
   credit_card_payment: "Pago con tarjeta de crédito"
   credit_owed: "Credit Owed"
   credit_total: "Credito Total"
   creditcard: "Tarjeta de crédito"
+  creditcards: Creditcards
   credits: Credits
   current: Actual
   customer: Cliente
   customer_details: "Customer Details"
   customer_search: "Customer Search"
+  date_created: Date created
   date_range: "Rango de Fecha"
+  debit: Debit
   delete: Eliminar
   depth: Profundidad
   description: "Descripción"
@@ -318,6 +338,7 @@ mx:
   editing_state: "Editando estado"
   editing_tax_category: "Editando categoría de impuesto"
   editing_tax_rate: "Editing cantidad de impuesto"
+  editing_tracker: Editing Tracker
   editing_user: "Editando usuario"
   editing_zone: "Editando zona"
   email: "Correo Electrónico"
@@ -362,6 +383,7 @@ mx:
   google_analytics_new: "Nueva cuenta de Google Analytics"
   google_analytics_setting_description: "Gestionar Google Analytics ID" 
   guest_user_account: "Paga sin registrarte"
+  has_no_shipped_units: has no shipped units
   height: Altura
   hello_user: "Hola usuario"
   history: Historia
@@ -371,12 +393,17 @@ mx:
   images: "Imágenes"
   images_for: "Imágenes para"
   in_progress: "En progreso"
+  include_in_shipment: Include in Shipment
+  included_in_other_shipment: Included in another Shipment
+  included_in_this_shipment: Included in this Shipment
+  instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   invalid_search: "Búsqueda inválida"
   inventory: Inventario
   inventory_adjustment: "Ajuste de inventario"
   inventory_setting_description: "Configuración del inventario, Devoluciones, mostrar artículos sin stock"
   inventory_settings: "Configuración del inventario"
+  is_not_available_to_shipment_address: is not available to shipment address
   issue_number: "Numero de Asunto"
   item: "Artículo"
   item_description: "Descripción del artículo"
@@ -413,6 +440,7 @@ mx:
   mail_queue_not_enabled: "Mail queue is not enabled (emails are delivered immediately)"
   mail_server_preferences: Preferencias del servidor de correo
   mail_server_settings: "Configuración del servidor de correo"
+  make_refund: Make refund
   mark_shipped: "Marcar como enviado"
   master_price: "Precio principal"
   max_items: Max Items
@@ -429,16 +457,17 @@ mx:
   new_billing_integration: New Billing Integration
   new_category: "Nueva categoría"
   new_coupon: "Nuevo Cupón"
-  new_credit_card_payment: "Nuevo pago con tarjeta de credito"
   new_customer: "Nuevo cliente"
   new_image: "Nueva Imágen"
   new_option_type: "Nuevo tipo de opción"
   new_option_value: "Nuevo valor de la opción"
   new_order: "New Order"
+  new_payment: "New Payment"
   new_product: "Nuevo producto"
   new_product_group: New Product Group
   new_property: "Nueva propiedad"
   new_prototype: "Nuevo prototipo"
+  new_return_authorization: New Return Authorization
   new_shipment: "Nuevo envío"
   new_shipping_category: "Nueva categoria de envío"
   new_shipping_method: "Nueva forma de envío"
@@ -448,6 +477,7 @@ mx:
   new_tax_rate: "Nueva valor de impuesto"
   new_taxon: "Nuevo Taxón"
   new_taxonomy: "Nueva Taxonomía"
+  new_tracker: New Tracker
   new_user: "Nuevo usuario"
   new_variant: "Nueva Variante"
   new_zone: "Nueva zona"
@@ -455,10 +485,12 @@ mx:
   no_items_in_cart: "El carrito está vacío"
   no_match_found: "No se ha encontrado"
   no_products_found: "No products found"
+  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No se ha encontrado ningun usuario con esa direccion de correo"
   none: "Ninguno"
   none_available: "No hay nada que mostrar"
   not: No
+  note: Note
   on_hand: "Disponible"
   operation: "Operación"
   option_Values: "Valores de opción"
@@ -476,6 +508,7 @@ mx:
   order_not_in_system: "Ese numero de orden no es válido"
   order_number: "Pedido No."
   order_operation_authorize: "Autorizar"
+  order_processed_but_following_items_are_out_of_stock: "Your order has been processed, but following items are out of stock:"
   order_processed_successfully: "Su pedido se ha procesado correctamente"
   order_summary: Order Summary
   order_sure_want_to: "Are you sure you want to {{event}} this order?"
@@ -483,6 +516,7 @@ mx:
   order_total_message: "El importe total cargado a su tarjeta de crédito será"
   order_updated: "Pedido actualizado"
   orders: Pedidos
+  other_payment_options: Other Payment Options
   out_of_stock: "Sin existencia"
   out_of_stock_products: "Out of Stock Products"
   over_paid: "Over Paid"
@@ -503,6 +537,7 @@ mx:
   payment_gateway: "Medio de pago"
   payment_information: "Información del pago"
   payments: Pagos
+  permalink: Permalink
   phone: Teléfono
   place_order: Realizar pedido
   please_create_user: "Por favor cree su cuenta de usuario"     
@@ -641,8 +676,14 @@ mx:
   prototype: Prototipo
   prototypes: "Prototipos"
   qty: Cant.
+  quantity_shipped: Quantity Shipped
   range: "Range"
   rate: proporción
+  reason: Reason
+  recalculate_order_total: "Recalculate order total"
+  receive: receive
+  received: Received
+  refund: Refund
   register: Registrarse como cliente Nuevo
   register_or_guest: "Pagar como Invitado ó Registrarse"
   registration: Registrarse
@@ -661,7 +702,13 @@ mx:
   resume: "Reanudar"
   resumed: Reanudado 
   return: volver
+  return_authorization: Return Authorization
+  return_authorization_updated: Return authorization updated
+  return_authorizations: Return Authorizations
+  return_quantity: Return Quantity
   returned: regresar
+  rma_number: RMA Number
+  rma_value: RMA Value
   roles: Funciones
   sales_tax: "Sales Tax"
   sales_total: "Total de ventas"
@@ -673,6 +720,7 @@ mx:
   search: Buscar
   search_results: "Search results for '{{keywords}}'"
   secure_connection_type: "Conexión segura"
+  secure_creditcard: Secure Creditcard
   select: Seleccionar
   select_from_prototype: "Seleccionar desde prototipo"
   select_preferred_shipping_option: "Seleccionar la opcion de envio preferida"
@@ -685,7 +733,9 @@ mx:
   ship: "Enviar"
   ship_address: "Dirección de envio"
   shipment: "Envío"
+  shipment_details: Shipment Details
   shipment_number: "Envío No."
+  shipment_updated: Shipment Updated
   shipments: "Shipments"
   shipped: "Enviado"
   shipping: "Envío"
@@ -725,6 +775,7 @@ mx:
   smtp_send_copy_to_this_addresses: "Enviar una copia de todos los mails que son enviados a la siguiente dirección. Para multiples direcciones, separar estos por medio de comas." 
   smtp_send_order_mails_as_from_following_address: "Enviar ordenes de email como si fueran de la siguiente dirección."
   smtp_username: nombre de usuario SMTP  
+  sold: Sold
   spree:
     date: Fecha 
     time: Hora                                               
@@ -757,6 +808,7 @@ mx:
   tax_total: "Total impuestos"
   tax_type: "Tipo de impuesto"
   taxon: Taxon
+  taxon_edit: Edit Taxon
   taxonomies: Taxonomías
   taxonomies_setting_description: "Crear y manejar taxonomias"
   taxonomy_edit: "Editar taxonomias"
@@ -773,12 +825,14 @@ mx:
   total: Total
   tracking: Seguimiento
   transaction: Transacción
+  transactions: Transactions
   tree: Arbol
   try_again: "Volver a intentar"
   type: Tipo
   unable_ship_method: "No se ha podido generar metodos de envio debido a un error en el servidor."
   unable_to_authorize_credit_card: "No se ha podido autorizar la tarjeta de credito"
   unable_to_capture_credit_card: "No se ha podido capturar la tarjeta de credito"
+  unable_to_connect_to_gateway: "Unable to connect to gateway."
   unable_to_save_order: "No se ha podido guardar el pedido"
   under_paid: "Under Paid"
   unrecognized_card_type: "No se ha podido reconocer el tipo de tarjeta"
@@ -795,11 +849,16 @@ mx:
   user_created_successfully: "User created successfully"
   user_details: "Detalles del usuario"
   users: Usuarios
+  validation:  
+    is_too_large: "is too large -- stock on hand cannot cover requested quantity!"
+    must_be_int: "must be an integer"
+    must_be_non_negative: "must be a non-negative value"
   value: "valor"
   variants: Variantes
   vat: "VAT"           
   version: Versión
   view_shipping_options: "View shipping options"
+  void: Void
   website: "Página web"
   weight: Peso
   welcome_to_sample_store: "Bienvenido a la tienda de ejemplo"

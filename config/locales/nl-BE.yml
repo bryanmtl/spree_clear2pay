@@ -84,6 +84,8 @@ nl-BE:
         presentation: Presentatie
       prototype: 
         name: Naam
+      return_authorization:
+        amount: Amount
       role: 
         name: Naam
       state: 
@@ -117,6 +119,9 @@ nl-BE:
       address: 
         one: Adres
         other: Adressen
+      cheque_payment:
+        one: Cheque Payment
+        other: Cheque Payments
       country: 
         one: Land
         other: Landen
@@ -150,6 +155,9 @@ nl-BE:
       prototype: 
         one: Prototype
         other: Prototypen
+      return_authorization:
+        one: Return Authorization
+        other: Return Authorizations
       role: 
         one: Rol
         other: Rollen
@@ -209,6 +217,7 @@ nl-BE:
   already_registered: Already Registered?
   alternative_phone: Alternative Phone
   amount: Bedrag
+  analytics_trackers: Analytics Trackers
   are_you_sure: "Ben je zeker"
   are_you_sure_category: "Wil je zeker deze categorie verwijderen?"
   are_you_sure_delete: "Wil je zeker dit record verwijderen?"
@@ -221,8 +230,10 @@ nl-BE:
   authorized: "Autorisatie gelukt"
   available_on: "Beschikbaar op"
   available_taxons: "Beschikbare taxons"
+  awaiting_return: Awaiting Return
   back: Terug
   back_to_store: "Verder Winkelen"
+  backordered: Backordered
   backordering_is_allowed: "Backordering {{not}} allowed"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
@@ -238,8 +249,10 @@ nl-BE:
   calculator_settings_warning: "If you are changing the calculator type, you must save first before you can edit the calculator settings"
   cancel: annuleer
   canceled: Geannuleerd
+  cannot_create_returns: Cannot create returns as this order has not shipped yet.
   capture: "in rekening brengen"
   card_code: "Kaart Code"
+  card_details: "Card details"
   card_number: "Kaartnummer"
   card_type_is: Card type is
   cart: Winkelmandje
@@ -247,6 +260,7 @@ nl-BE:
   category: Categorie
   change: Wijzig
   change_language: "Taalkeuze"
+  change_my_password: "Change my password"
   charge_total: Charge Total
   charged: Aangere
   charges: Charges
@@ -257,6 +271,7 @@ nl-BE:
     complete: Complete
     delivery: Delivery
     payment: Payment
+  cheque: Cheque
   city: Stad
   clone: Clone
   code: Code
@@ -276,6 +291,7 @@ nl-BE:
   copy_all_mails_to: "Kopieer Alle Mails Naar"
   cost_price: "Cost Price"
   count: Count
+  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
   country: Land
   country_based: "Gebaseerd op land"
   coupon: Coupon                                                                             
@@ -286,18 +302,22 @@ nl-BE:
   create_a_new_account: "Maak een nieuwe account aan"
   create_user_account: Create User Account
   created_successfully: "Succesvol aangemaakt"
+  credit: Credit
   credit_card: "Kredietkaart"
   credit_card_capture_complete: "Aanrekening via kredietkaart voltooid"
   credit_card_payment: "Kredietkaart Betaling"
   credit_owed: "Credit Owed"
   credit_total: Credit Total
   creditcard: Kredietkaart
+  creditcards: Creditcards
   credits: Credits
   current: Huidige
   customer: Klant
   customer_details: "Customer Details"
   customer_search: "Customer Search"
+  date_created: Date created
   date_range: "Datum Bereik"
+  debit: Debit
   delete: Verwijder
   depth: Diepte
   description: Omschrijving
@@ -318,6 +338,7 @@ nl-BE:
   editing_state: "Wijzigen Status"
   editing_tax_category: "Wijzigen BTW categorie"
   editing_tax_rate: "Editing Tax Rate"
+  editing_tracker: Editing Tracker
   editing_user: "Gebruiker Wijzigen"   
   editing_zone: "Zone Wijzigen"
   email: E-mail
@@ -362,6 +383,7 @@ nl-BE:
   google_analytics_new: "Nieuwe Google Analytics Account"
   google_analytics_setting_description: "Instellen Google Analytics ID" 
   guest_user_account: Checkout as a Guest
+  has_no_shipped_units: has no shipped units
   height: Hoogte
   hello_user: "Hallo Gebruiker"
   history: History
@@ -371,12 +393,17 @@ nl-BE:
   images: Afbeeldingen
   images_for: "Images for"
   in_progress: "Aan de gang"
+  include_in_shipment: Include in Shipment
+  included_in_other_shipment: Included in another Shipment
+  included_in_this_shipment: Included in this Shipment
+  instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   invalid_search: "Foute zoekcriteria."
   inventory: Voorraad
   inventory_adjustment: "Voorraad Aanpassing"
   inventory_setting_description: "Voorraad instellingen, Nabestellingen, Nul-Voorraad Weergave"
   inventory_settings: "Voorraad instellingen"
+  is_not_available_to_shipment_address: is not available to shipment address
   issue_number: Issue Number
   item: Products
   item_description: "Product Omschrijving"
@@ -413,6 +440,7 @@ nl-BE:
   mail_queue_not_enabled: "Mail queue is not enabled (emails are delivered immediately)"
   mail_server_preferences: "Mail server Instellingen"
   mail_server_settings: "Mail server Instellingen"
+  make_refund: Make refund
   mark_shipped: "Mark Shipped"
   master_price: "Prijs"
   max_items: Max Items
@@ -429,16 +457,17 @@ nl-BE:
   new_billing_integration: New Billing Integration
   new_category: "Nieuwe categorie"
   new_coupon: New Coupon
-  new_credit_card_payment: "Nieuwe Kredietkaart betaling"
   new_customer: "Nieuwe Klant"
   new_image: "Niewe Afbeelding"
   new_option_type: "Nieuwe Optie Type"
   new_option_value: "Nieuwe Optie Waarde"
   new_order: "New Order"
+  new_payment: "New Payment"
   new_product: "Nieuw Product"
   new_product_group: New Product Group
   new_property: "Nieuwe Eigenschap"
   new_prototype: "Niewe Prototype"
+  new_return_authorization: New Return Authorization
   new_shipment: "Nieuwe Verzending"
   new_shipping_category: "New Shipping Category"
   new_shipping_method: "New Shipping Method"
@@ -448,6 +477,7 @@ nl-BE:
   new_tax_rate: "Nieuw BTW Tarief"
   new_taxon: "New Taxon"
   new_taxonomy: "Nieuwe Taxonomie"
+  new_tracker: New Tracker
   new_user: "Nieuwe Gebruiker"
   new_variant: "Nieuwe Variant"
   new_zone: "Nieuwe Zone"
@@ -455,10 +485,12 @@ nl-BE:
   no_items_in_cart: "Geen producten in Winkelmandje"
   no_match_found: "Geen gelijke gevonden"
   no_products_found: "No products found"
+  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No user was found with that email address"
   none: Geen
   none_available: "Niet op voorraad"
   not: not
+  note: Note
   on_hand: "Op voorraad"
   operation: Operatie
   option_Values: "Waarden Opties"
@@ -476,6 +508,7 @@ nl-BE:
   order_not_in_system: That order number is not valid on this site.
   order_number: "Nummer Bestelling"
   order_operation_authorize: Autoriseren
+  order_processed_but_following_items_are_out_of_stock: "Your order has been processed, but following items are out of stock:"
   order_processed_successfully: "Uw bestelling is succesvol verwerkt"
   order_summary: Order Summary
   order_sure_want_to: "Are you sure you want to {{event}} this order?"
@@ -483,6 +516,7 @@ nl-BE:
   order_total_message: "Het aan te rekenen totaalbedrag is"
   order_updated: "Bestelling gewijzigd"
   orders: Bestellingen
+  other_payment_options: Other Payment Options
   out_of_stock: "Niet op Voorraad"
   out_of_stock_products: "Out of Stock Products"
   over_paid: "Over Paid"
@@ -503,6 +537,7 @@ nl-BE:
   payment_gateway: "Betalings-Gateway"
   payment_information: "Informatie Betaling"
   payments: Betalingen
+  permalink: Permalink
   phone: Telefoon
   place_order: Bestellen
   please_create_user: "Please create a user account"     
@@ -641,8 +676,14 @@ nl-BE:
   prototype: Prototype
   prototypes: Prototypes
   qty: Aantal
+  quantity_shipped: Quantity Shipped
   range: "Range"
   rate: Tarief
+  reason: Reason
+  recalculate_order_total: "Recalculate order total"
+  receive: receive
+  received: Received
+  refund: Refund
   register: Register as a New User
   register_or_guest: Checkout as Guest or Register
   registration: Registration           
@@ -661,7 +702,13 @@ nl-BE:
   resume: "Hervatten"
   resumed: Hervat
   return: Terugzenden
+  return_authorization: Return Authorization
+  return_authorization_updated: Return authorization updated
+  return_authorizations: Return Authorizations
+  return_quantity: Return Quantity
   returned: Teruggezonden
+  rma_number: RMA Number
+  rma_value: RMA Value
   roles: Rollen
   sales_tax: "Sales Tax"
   sales_total: "Omzet"
@@ -673,6 +720,7 @@ nl-BE:
   search: Zoek
   search_results: "Search results for '{{keywords}}'"
   secure_connection_type: "Secure Connection Type"
+  secure_creditcard: Secure Creditcard
   select: Selecteer
   select_from_prototype: "Selecteer vanuit Prototype"
   select_preferred_shipping_option: "Select preferred shipping option"
@@ -685,7 +733,9 @@ nl-BE:
   ship: Verzenden
   ship_address: "Afleveringssadres"
   shipment: Verzending
+  shipment_details: Shipment Details
   shipment_number: "Shipment #"
+  shipment_updated: Shipment Updated
   shipments: "Shipments"
   shipped: Verzonden
   shipping: Aflevering
@@ -725,6 +775,7 @@ nl-BE:
   smtp_send_copy_to_this_addresses: "Sends a copy of all outgoing mails to this address. For multiple addresses, separate with commas." 
   smtp_send_order_mails_as_from_following_address: "Send orders mails as from the following address."
   smtp_username: "SMTP Gebruikersnaam"
+  sold: Sold
   spree:
     date: Datum
     time: Tijd                                               
@@ -757,6 +808,7 @@ nl-BE:
   tax_total: "BTW Totaal"
   tax_type: "BTW Type"
   taxon: Taxon
+  taxon_edit: Edit Taxon
   taxonomies: Taxonomieën
   taxonomies_setting_description: "Aanmaken en wijzigen taxonomieën"
   taxonomy_edit: "Edit taxonomy"
@@ -773,12 +825,14 @@ nl-BE:
   total: Totaal
   tracking: Tracking
   transaction: Transactie
+  transactions: Transactions
   tree: Structuur
   try_again: "Probeer Opnieuw"
   type: Type
   unable_ship_method: "Unable to generate shipping methods due to a server error."
   unable_to_authorize_credit_card: "Autorisatie van de Kredietkaart mislukt"
   unable_to_capture_credit_card: "Aanrekening via Kredietkaart mislukt"
+  unable_to_connect_to_gateway: "Unable to connect to gateway."
   unable_to_save_order: "Bestelling opslaan is mislukt"
   under_paid: "Under Paid"
   unrecognized_card_type: Unrecognized card type
@@ -795,11 +849,16 @@ nl-BE:
   user_created_successfully: "User created successfully"
   user_details: "Details Gebruiker"
   users: Gebruikers
+  validation:  
+    is_too_large: "is too large -- stock on hand cannot cover requested quantity!"
+    must_be_int: "must be an integer"
+    must_be_non_negative: "must be a non-negative value"
   value: Waarde
   variants: Varianten
   vat: "VAT"           
   version: Versie
   view_shipping_options: "View shipping options"
+  void: Void
   website: Website
   weight: Gewicht
   welcome_to_sample_store: "Welkom in de voorbeeldwinkel"

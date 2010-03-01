@@ -27,9 +27,9 @@ Spree::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
 
   config.gem "highline", :version => '1.5.1'
-  config.gem 'authlogic', :version => '2.1.2'
+  config.gem 'authlogic', :version => '>=2.1.2'
   config.gem 'authlogic-oid', :lib => "authlogic_openid", :version => '1.0.4'
-  config.gem "activemerchant", :lib => "active_merchant", :version => '1.4.2'
+  config.gem "activemerchant", :lib => "active_merchant", :version => '1.5.0'
   config.gem 'activerecord-tableless', :lib => 'tableless', :version => '0.1.0'
   config.gem 'less', :version => '1.2.20'
   config.gem 'stringex', :lib => 'stringex', :version => '1.0.3'
@@ -39,6 +39,7 @@ Spree::Initializer.run do |config|
   config.gem 'will_paginate', :lib => 'will_paginate', :version => '2.3.11'
   config.gem 'state_machine', :lib => 'state_machine', :version => '0.8.0'
   config.gem "faker", :version => '0.3.1'
+  config.gem 'paperclip', :version => '>=2.3.1.1'
 
   # Only load the plugins named here, in the order given. By default, all plugins
   # in vendor/plugins are loaded in alphabetical order.

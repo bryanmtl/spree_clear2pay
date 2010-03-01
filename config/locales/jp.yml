@@ -84,6 +84,8 @@ jp:
         presentation: Presentation
       prototype:
         name: 名称
+      return_authorization:
+        amount: Amount
       role:
         name: 名称
       state:
@@ -117,6 +119,9 @@ jp:
       address:
         one: Address
         other: Addresses
+      cheque_payment:
+        one: Cheque Payment
+        other: Cheque Payments
       country:
         one: 国名
         other: 国名
@@ -150,6 +155,9 @@ jp:
       prototype:
         one: Prototype
         other: Prototypes
+      return_authorization:
+        one: Return Authorization
+        other: Return Authorizations
       role:
         one: Roles
         other: Roles
@@ -209,6 +217,7 @@ jp:
   already_registered: Already Registered?
   alternative_phone: Alternative Phone
   amount: 個数
+  analytics_trackers: Analytics Trackers
   are_you_sure: よろしいでしょうか
   are_you_sure_category: "Are you sure you want to delete this category?"
   are_you_sure_delete: "Are you sure you want to delete this record?"
@@ -221,8 +230,10 @@ jp:
   authorized: Authorized
   available_on: "Available On"
   available_taxons: 使用可能な分類
+  awaiting_return: Awaiting Return
   back: 戻る
   back_to_store: "Go Back To Store"
+  backordered: Backordered
   backordering_is_allowed: "Backordering {{not}} allowed"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
@@ -238,8 +249,10 @@ jp:
   calculator_settings_warning: "If you are changing the calculator type, you must save first before you can edit the calculator settings"
   cancel: キャンセル
   canceled: キャンセル済み
+  cannot_create_returns: Cannot create returns as this order has not shipped yet.
   capture: capture
   card_code: "Card Code"
+  card_details: "Card details"
   card_number: カード番号
   card_type_is: Card type is
   cart: カート
@@ -247,6 +260,7 @@ jp:
   category: カテゴリー
   change: 変更
   change_language: 言語の変更
+  change_my_password: "Change my password"
   charge_total: Charge Total
   charged: 課金
   charges: Charges
@@ -257,6 +271,7 @@ jp:
     complete: Complete
     delivery: Delivery
     payment: Payment
+  cheque: Cheque
   city: 都市名
   clone: Clone
   code: Code
@@ -276,6 +291,7 @@ jp:
   copy_all_mails_to: Copy All Mails To
   cost_price: "Cost Price"
   count: Count
+  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
   country: 国名
   country_based: "Country Based"
   coupon: Coupon                                                                             
@@ -286,18 +302,22 @@ jp:
   create_a_new_account: 新規アカウント作成
   create_user_account: ユーザアカウント作成
   created_successfully: 作成されました
+  credit: Credit
   credit_card: クレジットカード
   credit_card_capture_complete: "Credit Card Was Captured"
   credit_card_payment: "Credit Card Payment"
   credit_owed: "Credit Owed"
   credit_total: Credit Total
   creditcard: クレジットカード
+  creditcards: Creditcards
   credits: Credits
   current: Current
   customer: 顧客
   customer_details: "Customer Details"
   customer_search: "Customer Search"
+  date_created: Date created
   date_range: 日範囲
+  debit: Debit
   delete: 削除
   depth: 奥行き
   description: 説明
@@ -318,6 +338,7 @@ jp:
   editing_state: 都道府県（州）編集
   editing_tax_category: 税カテゴリー編集
   editing_tax_rate: "Editing Tax Rate"
+  editing_tracker: Editing Tracker
   editing_user: ユーザー編集
   editing_zone: ゾーン編集
   email: Eメール
@@ -362,6 +383,7 @@ jp:
   google_analytics_new: "New Google Analytics Account"
   google_analytics_setting_description: "Manage Google Analytics ID"
   guest_user_account: Checkout as a Guest
+  has_no_shipped_units: has no shipped units
   height: 高さ
   hello_user: "Hello User"
   history: 履歴
@@ -371,12 +393,17 @@ jp:
   images: 画像
   images_for: "Images for"
   in_progress: "In Progress"
+  include_in_shipment: Include in Shipment
+  included_in_other_shipment: Included in another Shipment
+  included_in_this_shipment: Included in this Shipment
+  instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   invalid_search: "Invalid search criteria."
   inventory: 在庫
   inventory_adjustment: 在庫調整
   inventory_setting_description: "Inventory Configuration, Backordering, Zero-Stock Display"
   inventory_settings: 在庫設定
+  is_not_available_to_shipment_address: is not available to shipment address
   issue_number: Issue Number
   item: 品目
   item_description: 品目説明
@@ -413,6 +440,7 @@ jp:
   mail_queue_not_enabled: "Mail queue is not enabled (emails are delivered immediately)"
   mail_server_preferences: Mail Server Preferences
   mail_server_settings: メールサーバ設定
+  make_refund: Make refund
   mark_shipped: "Mark Shipped"
   master_price: 定価
   max_items: Max Items
@@ -429,16 +457,17 @@ jp:
   new_billing_integration: New Billing Integration
   new_category: 新規カテゴリー
   new_coupon: New Coupon
-  new_credit_card_payment: 新規カード払い
   new_customer: 新規顧客
   new_image: 新規画像
   new_option_type: 新規オプションタイプ
   new_option_value: 新規オプション値
   new_order: "New Order"
+  new_payment: "New Payment"
   new_product: 新規商品
   new_product_group: New Product Group
   new_property: 新規属性
   new_prototype: 新規プロトタイプ
+  new_return_authorization: New Return Authorization
   new_shipment: 新規配送
   new_shipping_category: 新規配送カテゴリー
   new_shipping_method: 新規配送方法
@@ -448,6 +477,7 @@ jp:
   new_tax_rate: 新規税率
   new_taxon: "New Taxon"
   new_taxonomy: "新規分類"
+  new_tracker: New Tracker
   new_user: 新規ユーザ
   new_variant: 新規形式
   new_zone: 新規ゾーン
@@ -455,10 +485,12 @@ jp:
   no_items_in_cart: ""
   no_match_found: "No Match Found"
   no_products_found: "No products found"
+  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No user was found with that email address"
   none: 空です
   none_available: "None Available"
   not: not
+  note: Note
   on_hand: 入荷日
   operation: Operation
   option_Values: オプション値
@@ -476,6 +508,7 @@ jp:
   order_not_in_system: That order number is not valid on this site.
   order_number: 注文
   order_operation_authorize: Authorize
+  order_processed_but_following_items_are_out_of_stock: "Your order has been processed, but following items are out of stock:"
   order_processed_successfully: "Your order has been processed successfully"
   order_summary: Order Summary
   order_sure_want_to: "Are you sure you want to {{event}} this order?"
@@ -483,6 +516,7 @@ jp:
   order_total_message: "The total amount charged to your card will be"
   order_updated: "Order Updated"
   orders: 注文
+  other_payment_options: Other Payment Options
   out_of_stock: 在庫切りです
   out_of_stock_products: "Out of Stock Products"
   over_paid: "Over Paid"
@@ -503,6 +537,7 @@ jp:
   payment_gateway: "Payment Gateway"
   payment_information: 支払い情報
   payments: 支払い方法
+  permalink: Permalink
   phone: 電話番号
   place_order: Place Order
   please_create_user: "Please create a user account"     
@@ -641,8 +676,14 @@ jp:
   prototype: プロトタイプ
   prototypes: プロトタイプ
   qty: 個数
+  quantity_shipped: Quantity Shipped
   range: "Range"
   rate: 比率
+  reason: Reason
+  recalculate_order_total: "Recalculate order total"
+  receive: receive
+  received: Received
+  refund: Refund
   register: 新規ユーザとして登録
   register_or_guest: Checkout as Guest or Register
   registration: 登録
@@ -661,7 +702,13 @@ jp:
   resume: "resume"
   resumed: Resumed
   return: return
+  return_authorization: Return Authorization
+  return_authorization_updated: Return authorization updated
+  return_authorizations: Return Authorizations
+  return_quantity: Return Quantity
   returned: Returned
+  rma_number: RMA Number
+  rma_value: RMA Value
   roles: 役割
   sales_tax: "Sales Tax"
   sales_total: 売上げ合計
@@ -673,6 +720,7 @@ jp:
   search: 検索
   search_results: "Search results for '{{keywords}}'"
   secure_connection_type: Secure Connection Type
+  secure_creditcard: Secure Creditcard
   select: 選択
   select_from_prototype: "Select From Prototype"
   select_preferred_shipping_option: "Select preferred shipping option"
@@ -685,7 +733,9 @@ jp:
   ship: 配送
   ship_address: 配送先住所
   shipment: 発送
+  shipment_details: Shipment Details
   shipment_number: "発送 #"
+  shipment_updated: Shipment Updated
   shipments: "Shipments"
   shipped: 発送済
   shipping: 送料
@@ -725,6 +775,7 @@ jp:
   smtp_send_copy_to_this_addresses: "Sends a copy of all outgoing mails to this address. For multiple addresses, separate with commas." 
   smtp_send_order_mails_as_from_following_address: "Send orders mails as from the following address."
   smtp_username: SMTPユーザ名
+  sold: Sold
   spree:
     date: 日付
     time: 時間
@@ -757,6 +808,7 @@ jp:
   tax_total: 税合計
   tax_type: 税種別
   taxon: 分類単位
+  taxon_edit: Edit Taxon
   taxonomies: 分類単位
   taxonomies_setting_description: "Create and manage taxonomies"
   taxonomy_edit: "Edit taxonomy"
@@ -773,12 +825,14 @@ jp:
   total: 小計
   tracking: Tracking
   transaction: Transaction
+  transactions: Transactions
   tree: Tree
   try_again: "Try Again"
   type: 支払い方法
   unable_ship_method: "Unable to generate shipping methods due to a server error."
   unable_to_authorize_credit_card: "Unable to Authorize Credit Card"
   unable_to_capture_credit_card: "Unable to Capture Credit Card"
+  unable_to_connect_to_gateway: "Unable to connect to gateway."
   unable_to_save_order: "Unable to Save Order"
   under_paid: "Under Paid"
   unrecognized_card_type: Unrecognized card type
@@ -795,11 +849,16 @@ jp:
   user_created_successfully: "User created successfully"
   user_details: ユーザ詳細
   users: ユーザ
+  validation:  
+    is_too_large: "is too large -- stock on hand cannot cover requested quantity!"
+    must_be_int: "must be an integer"
+    must_be_non_negative: "must be a non-negative value"
   value: 値
   variants: 形式
   vat: "VAT"           
   version: バージョン
   view_shipping_options: "View shipping options"
+  void: Void
   website: ウェブサイト
   weight: 重量
   welcome_to_sample_store: "Welcome to the sample store"

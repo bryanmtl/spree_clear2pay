@@ -1,8 +1,11 @@
 class Gateway::Clear2pay < Gateway
   
-  preference :login, :string
-	preference :password, :password
+  preference :cpid, :string
+	# preference :password, :password
 	preference :url, :string
+	preference :currency_code, :string
+	preference :redirect_success, :string
+	preference :redirect_fail, :string
 	
 	# Login: infinitize.admin@clear2pay.com
 	#   PWD : 465d4Ez?76

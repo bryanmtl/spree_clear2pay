@@ -24,7 +24,7 @@ class Product < ActiveRecord::Base
   has_many :product_properties, :dependent => :destroy, :attributes => true
   has_many :properties, :through => :product_properties
   has_many :images, :as => :viewable, :order => :position, :dependent => :destroy
-
+  has_and_belongs_to_many :product_groups
   belongs_to :tax_category
   has_and_belongs_to_many :taxons
   belongs_to :shipping_category
@@ -38,6 +38,7 @@ class Product < ActiveRecord::Base
   after_create :set_master_variant_defaults
   after_create :add_properties_and_option_types_from_prototype
   before_save :recalculate_count_on_hand
+  after_save :update_memberships
   after_save :set_master_on_hand_to_zero_when_product_has_variants
   after_save :save_master
 
@@ -59,15 +60,19 @@ class Product < ActiveRecord::Base
 
   alias :options :product_option_types
 
-  include Scopes::Product
+  include ::Scopes::Product
 
   # default product scope only lists available and non-deleted products
   named_scope :active,      lambda { |*args| Product.not_deleted.available(args.first).scope(:find) }
   named_scope :on_hand,     { :conditions => "products.count_on_hand > 0" }
   named_scope :not_deleted, { :conditions => "products.deleted_at is null" }
   named_scope :available,   lambda { |*args| { :conditions => ["products.available_on <= ?", args.first || Time.zone.now] } }
-  named_scope :group_by_products_id, { :group => "products.id" }
-
+  
+  if (ActiveRecord::Base.connection.adapter_name == 'PostgreSQL')
+    named_scope :group_by_products_id, { :group => "products." + Product.column_names.join(", products.") } if ActiveRecord::Base.connection.tables.include?("products")
+  else
+    named_scope :group_by_products_id, { :group => "products.id" }
+  end
   # ----------------------------------------------------------------------------------------------------------
   #
   # The following methods are deprecated and will be removed in a future version of Spree
@@ -170,6 +175,13 @@ class Product < ActiveRecord::Base
     p
   end
 
+  # use deleted? rather than checking the attribute directly. this
+  # allows extensions to override deleted? if they want to provide
+  # their own definition.
+  def deleted?
+    deleted_at
+  end
+
   private
 
   def recalculate_count_on_hand
@@ -195,4 +207,8 @@ class Product < ActiveRecord::Base
   def save_master
     master.save if master && (master.changed? || master.new_record?)
   end
+
+  def update_memberships
+    self.product_groups = ProductGroup.all.select{|pg| pg.include?(self)}
+  end  
 end

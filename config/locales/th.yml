@@ -84,6 +84,8 @@ th:
         presentation: ชื่อที่แสดง
       prototype: 
         name: ชื่อ
+      return_authorization:
+        amount: Amount
       role: 
         name: ชื่อ
       state: 
@@ -117,6 +119,9 @@ th:
       address: 
         one: ที่อยู่
         other: ที่อยู่เพิ่มเติม
+      cheque_payment:
+        one: Cheque Payment
+        other: Cheque Payments
       country: 
         one: ประเทศ
         other: ประเทศเพิ่มเติม
@@ -150,6 +155,9 @@ th:
       prototype: 
         one: Prototype
         other: Prototypes
+      return_authorization:
+        one: Return Authorization
+        other: Return Authorizations
       role: 
         one: Roles
         other: Roles
@@ -209,6 +217,7 @@ th:
   already_registered: Already Registered?
   alternative_phone: เบอร์โทรอื่นๆ
   amount: จำนวนรวม
+  analytics_trackers: Analytics Trackers
   are_you_sure: "แน่ใจหรือไม่"
   are_you_sure_category: "คุณแน่ใจที่จะลบหมวดนี้หรือไม่?"
   are_you_sure_delete: "คุณแน่ใจที่จะลบข้อมูลนี้หรือไม่?"
@@ -221,8 +230,10 @@ th:
   authorized: ผ่านการขออนุญาต
   available_on: "Available On"
   available_taxons: "Available Taxons"
+  awaiting_return: Awaiting Return
   back: กลับ
   back_to_store: "กลับไปหน้าร้าน"
+  backordered: Backordered
   backordering_is_allowed: "({{not}} allowed) การซื้อเมื่อสินค้าหมด"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
@@ -238,8 +249,10 @@ th:
   calculator_settings_warning: "If you are changing the calculator type, you must save first before you can edit the calculator settings"
   cancel: ยกเลิก
   canceled: ยกเลิกแล้ว
+  cannot_create_returns: Cannot create returns as this order has not shipped yet.
   capture: capture
   card_code: "รหัสบัตร"
+  card_details: "Card details"
   card_number: "หมายเลขบัตร"
   card_type_is: ชนิดของบัตร
   cart: ตะกร้าสินค้า
@@ -247,6 +260,7 @@ th:
   category: ชนิด
   change: เปลี่ยน
   change_language: เปลี่ยนภาษา
+  change_my_password: "Change my password"
   charge_total: Charge Total
   charged: Charged
   charges: Charges
@@ -257,6 +271,7 @@ th:
     complete: Complete
     delivery: Delivery
     payment: Payment
+  cheque: Cheque
   city: เขต หรือ อำเภอ
   clone: Clone
   code: Code
@@ -276,6 +291,7 @@ th:
   copy_all_mails_to: คัดลอกเมลทุกฉบับส่งไปที่
   cost_price: "Cost Price"
   count: Count
+  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
   country: ประเทศ
   country_based: ยืดประเทศเป็นหลัก
   coupon: Coupon                                                                             
@@ -286,18 +302,22 @@ th:
   create_a_new_account: สร้างบัญชีผู้ใช้ใหม่
   create_user_account: สร้างบัญชีผู้ใช้ใหม่
   created_successfully: "สร้างสำเร็จ"
+  credit: Credit
   credit_card: "Credit Card"
   credit_card_capture_complete: "Credit Card Was Captured"
   credit_card_payment: "Credit Card Payment"
   credit_owed: "Credit Owed"
   credit_total: Credit Total
   creditcard: Creditcard
+  creditcards: Creditcards
   credits: Credits
   current: Current
   customer: ลูกค้า
   customer_details: "Customer Details"
   customer_search: "Customer Search"
+  date_created: Date created
   date_range: ช่วงวันที่
+  debit: Debit
   delete: ลบ
   depth: ลึก
   description: รายละเอียด
@@ -318,6 +338,7 @@ th:
   editing_state: "Editing State"
   editing_tax_category: แก้ไขแบบการคิดภาษี
   editing_tax_rate: "แก้ไขอัตราภาษี"
+  editing_tracker: Editing Tracker
   editing_user: "แก้ไขข้อมูลผู้ใช้"   
   editing_zone: แก้ไขเขต
   email: อีเมล
@@ -362,6 +383,7 @@ th:
   google_analytics_new: "New Google Analytics Account"
   google_analytics_setting_description: "Manage Google Analytics ID" 
   guest_user_account: Checkout as a Guest
+  has_no_shipped_units: has no shipped units
   height: สูง
   hello_user: "Hello User"
   history: ประวัติ
@@ -371,12 +393,17 @@ th:
   images: รูปภาพ
   images_for: "Images for"
   in_progress: "In Progress"
+  include_in_shipment: Include in Shipment
+  included_in_other_shipment: Included in another Shipment
+  included_in_this_shipment: Included in this Shipment
+  instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   invalid_search: "Invalid search criteria."
   inventory: คลัง
   inventory_adjustment: "ปรับแต่งคลังสินค้า"
   inventory_setting_description: "จัดการคลังสินค้า การสั่งสินค้า และ การแสดงผลเมื่อของหมด"
   inventory_settings: "จัดการคลังสินค้า"
+  is_not_available_to_shipment_address: is not available to shipment address
   issue_number: Issue Number
   item: สินค้า
   item_description: รายละเอียดสินค้า
@@ -413,6 +440,7 @@ th:
   mail_queue_not_enabled: "Mail queue is not enabled (emails are delivered immediately)"
   mail_server_preferences: ปรับแต่งเมลเซิร์ฟเวอร์
   mail_server_settings: เมลเซิร์ฟเวอร์ 
+  make_refund: Make refund
   mark_shipped: "Mark Shipped"
   master_price: ราคาหลัก
   max_items: Max Items
@@ -429,16 +457,17 @@ th:
   new_billing_integration: New Billing Integration
   new_category: "New category"
   new_coupon: New Coupon
-  new_credit_card_payment: สร้างรายการจ่ายชำระผ่านบัตรเครดิต
   new_customer: สมัครสมาชิก
   new_image: เพิ่มภาพ
   new_option_type: เพิ่มรายการให้เลือก
   new_option_value: เพิ่มรายการให้ตัวเลือก
   new_order: "New Order"
+  new_payment: "New Payment"
   new_product: เพิ่มสินค้า
   new_product_group: New Product Group
   new_property: เพิ่มคุณลักษณะ
   new_prototype: เพิ่มต้นแบบ
+  new_return_authorization: New Return Authorization
   new_shipment: "New Shipment"
   new_shipping_category: "เพิ่มกลุ่มวิธีการจัดส่ง"
   new_shipping_method: "เพิ่มวิธีจัดส่ง"
@@ -448,6 +477,7 @@ th:
   new_tax_rate: "เพิ่มอัตราการเก็บภาษี"
   new_taxon: "New Taxon"
   new_taxonomy: เพิ่มหมวดหมู่
+  new_tracker: New Tracker
   new_user: "สร้างผู้ใช้ใหม่"
   new_variant: "New Variant"
   new_zone: เพิ่มเขตใหม่
@@ -455,10 +485,12 @@ th:
   no_items_in_cart: ""
   no_match_found: "No Match Found"
   no_products_found: "No products found"
+  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No user was found with that email address"
   none: ว่าง
   none_available: "None Available"
   not: "ไม่"
+  note: Note
   on_hand: สินค้าในคลัง
   operation: Operation
   option_Values: รายการตัวเลือก
@@ -476,6 +508,7 @@ th:
   order_not_in_system: That order number is not valid on this site.
   order_number: รหัสสั่งซื้อ
   order_operation_authorize: Authorize
+  order_processed_but_following_items_are_out_of_stock: "Your order has been processed, but following items are out of stock:"
   order_processed_successfully: "รายการสั่งซื้อของคุณถูกดำเนินการเรียบร้อยแล้ว"
   order_summary: Order Summary
   order_sure_want_to: "Are you sure you want to {{event}} this order?"
@@ -483,6 +516,7 @@ th:
   order_total_message: "ยอดซื้อรวมจะเก็บจากบัตรเครดิตของคุณ"
   order_updated: "ปรับปรุงรายการสั่งซื้อ"
   orders: รายการสั่งซื้อ
+  other_payment_options: Other Payment Options
   out_of_stock: สินค้าหมด
   out_of_stock_products: "Out of Stock Products"
   over_paid: "Over Paid"
@@ -503,6 +537,7 @@ th:
   payment_gateway: ช่องทางจ่ายเงิน
   payment_information: ข้อมูลการจ่ายเงิน
   payments: รายการจ่าย
+  permalink: Permalink
   phone: เบอร์โทรศัพท์
   place_order: Place Order        
   please_create_user: "Please create a user account"     
@@ -641,8 +676,14 @@ th:
   prototype: ต้นแบบ
   prototypes: ต้นแบบ
   qty: จำนวน
+  quantity_shipped: Quantity Shipped
   range: "Range"
   rate: "อัตรา(เปอร์เซ็น)"
+  reason: Reason
+  recalculate_order_total: "Recalculate order total"
+  receive: receive
+  received: Received
+  refund: Refund
   register: "ลงทะเบียนผู้ใช้ใหม่"
   register_or_guest: "สั่งซื้อแบบบุคคลทั่วไปหรือแบบสมาชิก"
   registration: ลงทะเบียน  
@@ -661,7 +702,13 @@ th:
   resume: "resume"
   resumed: Resumed
   return: return
+  return_authorization: Return Authorization
+  return_authorization_updated: Return authorization updated
+  return_authorizations: Return Authorizations
+  return_quantity: Return Quantity
   returned: Returned
+  rma_number: RMA Number
+  rma_value: RMA Value
   roles: บทบาท
   sales_tax: "Sales Tax"
   sales_total: "ยอดขายรวม"
@@ -673,6 +720,7 @@ th:
   search: ค้นหา
   search_results: "Search results for '{{keywords}}'"
   secure_connection_type: การเชื่อมต่อแบบปลอดภัย
+  secure_creditcard: Secure Creditcard
   select: เลือก
   select_from_prototype: เลือกจากต้นแบบ
   select_preferred_shipping_option: "เลือกวิธีการจัดส่งที่ท่านต้องการ"
@@ -685,7 +733,9 @@ th:
   ship: เรือ
   ship_address: "ที่อยู่ในการจัดส่ง"
   shipment: การขนส่งทางเรือ
+  shipment_details: Shipment Details
   shipment_number: "รหัสส่งของ"
+  shipment_updated: Shipment Updated
   shipments: "Shipments"
   shipped: เสร็จสินการจัดส่ง
   shipping: "ค่าจัดส่ง"
@@ -725,6 +775,7 @@ th:
   smtp_send_copy_to_this_addresses: "คัดลอกเมลทุกฉบับไปยังที่อยู่นี้ ในกรณีที่มีที่อยู่หลายที่ ให้แยกแต่ละที่ด้วยเครื่องหมายจุลภาค"
   smtp_send_order_mails_as_from_following_address: โปรแกรมจะส่งเมล์รายการสั่งซื้อจากที่อยู่นี้
   smtp_username: SMTP Username  
+  sold: Sold
   spree:
     date: วัน
     time: เวลา
@@ -757,6 +808,7 @@ th:
   tax_total: "รวมภาษี"
   tax_type: ชนิดของภาษี
   taxon: Taxon
+  taxon_edit: Edit Taxon
   taxonomies: หมวดหมู่
   taxonomies_setting_description: เพิ่ม ลบ แก้ไข หมวดหมู่
   taxonomy_edit: แก้ไขหมวดหมู่นี้
@@ -773,12 +825,14 @@ th:
   total: รวม
   tracking: ติดตาม
   transaction: การดำเนินงาน
+  transactions: Transactions
   tree: แผนภูมิต้นไม้
   try_again: "ทดลองอีกครั้ง"
   type: ชนิด
   unable_ship_method: "ไม่สามารถสร้างรายการวิธีจัดส่ง เพราะเซิร์ฟเวอร์ขัดข้อง"
   unable_to_authorize_credit_card: "ไม่สามารถยืนยันบัตรเครดิตได้"
   unable_to_capture_credit_card: "ไม่พบบัตรเครดิตดังกล่าว"
+  unable_to_connect_to_gateway: "Unable to connect to gateway."
   unable_to_save_order: "ไม่สามารถบันทึกรายการซื้อได้"
   under_paid: "Under Paid"
   unrecognized_card_type: ไม่รู้จักบัตรชนิดนี้
@@ -795,11 +849,16 @@ th:
   user_created_successfully: "User created successfully"
   user_details: "รายละเอียดผู้ใช้"
   users: ผู้ใช้
+  validation:  
+    is_too_large: "is too large -- stock on hand cannot cover requested quantity!"
+    must_be_int: "must be an integer"
+    must_be_non_negative: "must be a non-negative value"
   value: ค่า
   variants: ความต่างในสินค้า
   vat: "VAT"           
   version: รุ่น
   view_shipping_options: "View shipping options"
+  void: Void
   website: เว็บไซต์
   weight: น้ำหนัก
   welcome_to_sample_store: "ยินดีต้อนรับสู่ร้านค้าตัวอย่าง"

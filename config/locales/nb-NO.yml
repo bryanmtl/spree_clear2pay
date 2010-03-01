@@ -84,6 +84,8 @@ nb-NO:
         presentation: "Presentasjon"
       prototype: 
         name: Navn
+      return_authorization:
+        amount: Amount
       role: 
         name: Navn
       state: 
@@ -117,6 +119,9 @@ nb-NO:
       address: 
         one: Adresse
         other: Adresser
+      cheque_payment:
+        one: Cheque Payment
+        other: Cheque Payments
       country: 
         one: Land
         other: Land
@@ -150,6 +155,9 @@ nb-NO:
       prototype: 
         one: Prototype
         other: Prototyper
+      return_authorization:
+        one: Return Authorization
+        other: Return Authorizations
       role: 
         one: Rolle
         other: Roller
@@ -209,6 +217,7 @@ nb-NO:
   already_registered: Already Registered?
   alternative_phone: Alternative Phone
   amount: Beløp
+  analytics_trackers: Analytics Trackers
   are_you_sure: "Er du sikker"
   are_you_sure_category: "Er du sikker på at du vil slette denne kategorien?"
   are_you_sure_delete: "Er du sikker på at du vil slette denne?"
@@ -221,8 +230,10 @@ nb-NO:
   authorized: Autorisert
   available_on: "Tilgjengelig"
   available_taxons: "Tilgjengelige klasser"
+  awaiting_return: Awaiting Return
   back: Tilbake
   back_to_store: "Tilbake til butikken"
+  backordered: Backordered
   backordering_is_allowed: "Backordering {{not}} allowed"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
@@ -238,8 +249,10 @@ nb-NO:
   calculator_settings_warning: "If you are changing the calculator type, you must save first before you can edit the calculator settings"
   cancel: Avbryt
   canceled: Avbrutt
+  cannot_create_returns: Cannot create returns as this order has not shipped yet.
   capture: capture
   card_code: "CVV-kode"
+  card_details: "Card details"
   card_number: "Kortnummer"
   card_type_is: Card type is
   cart: Handlekurv
@@ -247,6 +260,7 @@ nb-NO:
   category: Kategori
   change: Endre
   change_language: "Endre språk"
+  change_my_password: "Change my password"
   charge_total: Charge Total
   charged: "Belastet"
   charges: Charges
@@ -257,6 +271,7 @@ nb-NO:
     complete: Complete
     delivery: Delivery
     payment: Payment
+  cheque: Cheque
   city: Sted
   clone: Clone
   code: Code
@@ -276,6 +291,7 @@ nb-NO:
   copy_all_mails_to: Kopier alle eposter til
   cost_price: "Cost Price"
   count: Count
+  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
   country: Land
   country_based: "Land"
   coupon: Coupon                                                                             
@@ -286,18 +302,22 @@ nb-NO:
   create_a_new_account: "Opprett ny konto"
   create_user_account: Create User Account
   created_successfully: "Vellykket opprettelse"
+  credit: Credit
   credit_card: "Kredittkort"
   credit_card_capture_complete: "Kortopplysninger har blitt lagret"
   credit_card_payment: "Betaling med kort"
   credit_owed: "Credit Owed"
   credit_total: Credit Total
   creditcard: Kredittkort
+  creditcards: Creditcards
   credits: Credits
   current: "Nå"
   customer: Kunde
   customer_details: "Customer Details"
   customer_search: "Customer Search"
+  date_created: Date created
   date_range: "Datoområde"
+  debit: Debit
   delete: Slett
   depth: Dybde
   description: Beskrivelse
@@ -318,6 +338,7 @@ nb-NO:
   editing_state: "Endre stat"
   editing_tax_category: "Endre momskategori"
   editing_tax_rate: "Editing Tax Rate"
+  editing_tracker: Editing Tracker
   editing_user: "Endre bruker"   
   editing_zone: "Endre sone"
   email: Epost
@@ -362,6 +383,7 @@ nb-NO:
   google_analytics_new: "Ny Google Analytics-konto"
   google_analytics_setting_description: "Manage Google Analytics ID" 
   guest_user_account: Checkout as a Guest
+  has_no_shipped_units: has no shipped units
   height: Høyde
   hello_user: "Hallo, bruker"
   history: History
@@ -371,12 +393,17 @@ nb-NO:
   images: Bilder
   images_for: "Images for"
   in_progress: "Pågår"
+  include_in_shipment: Include in Shipment
+  included_in_other_shipment: Included in another Shipment
+  included_in_this_shipment: Included in this Shipment
+  instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   invalid_search: "Ugyldig søkekriterie."
   inventory: Varelager
   inventory_adjustment: "Justering av varelager"
   inventory_setting_description: "Konfigurer varelager og restordre."
   inventory_settings: "Varelagerinnstillinger"
+  is_not_available_to_shipment_address: is not available to shipment address
   issue_number: Issue Number
   item: Artikkel
   item_description: "Beskrivelse"
@@ -413,6 +440,7 @@ nb-NO:
   mail_queue_not_enabled: "Mail queue is not enabled (emails are delivered immediately)"
   mail_server_preferences: "Preferanser for epostserver"
   mail_server_settings: "Innstillinger for epostserver"
+  make_refund: Make refund
   mark_shipped: "Merk som levert"
   master_price: "Ordinær pris"
   max_items: Max Items
@@ -429,16 +457,17 @@ nb-NO:
   new_billing_integration: New Billing Integration
   new_category: "Ny kategori"
   new_coupon: New Coupon
-  new_credit_card_payment: "Ny kortbetaling"
   new_customer: "Ny kunde"
   new_image: "Nytt bilde"
   new_option_type: "Ny variasjonstype"
   new_option_value: "Ny variasjonsverdi"
   new_order: "New Order"
+  new_payment: "New Payment"
   new_product: "Nytt produkt"
   new_product_group: New Product Group
   new_property: "Ny egenskap"
   new_prototype: "Ny prototype"
+  new_return_authorization: New Return Authorization
   new_shipment: "Ny leveranse"
   new_shipping_category: "Ny fraktkategori"
   new_shipping_method: "Ny leveransemåte"
@@ -448,6 +477,7 @@ nb-NO:
   new_tax_rate: "Nytt momsnivå"
   new_taxon: "New Taxon"
   new_taxonomy: "Ny klassifikasjon"
+  new_tracker: New Tracker
   new_user: "Ny bruker"
   new_variant: "Ny variant"
   new_zone: "Ny sone"
@@ -455,10 +485,12 @@ nb-NO:
   no_items_in_cart: "Ingen artikler i handlekurven"
   no_match_found: "Ingen treff"
   no_products_found: "No products found"
+  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No user was found with that email address"
   none: Ingen
   none_available: "Ingen tilgjengelig"
   not: not
+  note: Note
   on_hand: "Tilgjengelig"
   operation: Operasjon
   option_Values: "Variasjonsverdier"
@@ -476,6 +508,7 @@ nb-NO:
   order_not_in_system: That order number is not valid on this site.
   order_number: Ordrenummer
   order_operation_authorize: Autoriser
+  order_processed_but_following_items_are_out_of_stock: "Your order has been processed, but following items are out of stock:"
   order_processed_successfully: "Din ordre har blitt behandlet"
   order_summary: Order Summary
   order_sure_want_to: "Are you sure you want to {{event}} this order?"
@@ -483,6 +516,7 @@ nb-NO:
   order_total_message: "Beløpet som vil bli belastet ditt kort er"
   order_updated: "Ordre oppdatert"
   orders: Ordrer
+  other_payment_options: Other Payment Options
   out_of_stock: "Ikke på lager"
   out_of_stock_products: "Out of Stock Products"
   over_paid: "Over Paid"
@@ -503,6 +537,7 @@ nb-NO:
   payment_gateway: "Betalingstjeneste"
   payment_information: "Betalingsinformasjon"
   payments: Betalinger
+  permalink: Permalink
   phone: Telefon
   place_order: "Bekreft ordre"
   please_create_user: "Please create a user account"     
@@ -641,8 +676,14 @@ nb-NO:
   prototype: Prototype
   prototypes: Prototyper
   qty: Antall
+  quantity_shipped: Quantity Shipped
   range: "Range"
   rate: "Nivå"
+  reason: Reason
+  recalculate_order_total: "Recalculate order total"
+  receive: receive
+  received: Received
+  refund: Refund
   register: Register as a New User
   register_or_guest: Checkout as Guest or Register
   registration: Registration           
@@ -661,7 +702,13 @@ nb-NO:
   resume: "fortsett"
   resumed: Fortsatt
   return: returner
+  return_authorization: Return Authorization
+  return_authorization_updated: Return authorization updated
+  return_authorizations: Return Authorizations
+  return_quantity: Return Quantity
   returned: Returnert
+  rma_number: RMA Number
+  rma_value: RMA Value
   roles: Roller
   sales_tax: "Sales Tax"
   sales_total: "Brutto omsetning"
@@ -673,6 +720,7 @@ nb-NO:
   search: Søk
   search_results: "Search results for '{{keywords}}'"
   secure_connection_type: "Kryptert forbindelse"
+  secure_creditcard: Secure Creditcard
   select: Velg
   select_from_prototype: "Velg fra prototype"
   select_preferred_shipping_option: "Velg ønsket leveransemåte"
@@ -685,7 +733,9 @@ nb-NO:
   ship: send
   ship_address: "Leveringsadresse"
   shipment: Leveranse
+  shipment_details: Shipment Details
   shipment_number: "Leveransenummer"
+  shipment_updated: Shipment Updated
   shipments: "Shipments"
   shipped: Sendt
   shipping: Frakt
@@ -725,6 +775,7 @@ nb-NO:
   smtp_send_copy_to_this_addresses: "Sends a copy of all outgoing mails to this address. For multiple addresses, separate with commas." 
   smtp_send_order_mails_as_from_following_address: "Send orders mails as from the following address."
   smtp_username: "SMTP brukernavn"
+  sold: Sold
   spree:
     date: Dato
     time: Tid                                               
@@ -757,6 +808,7 @@ nb-NO:
   tax_total: "Moms"
   tax_type: "Momstype"
   taxon: Klasse
+  taxon_edit: Edit Taxon
   taxonomies: Klassifikasjoner
   taxonomies_setting_description: "Konfigurer klassifikasjoner."
   taxonomy_edit: "Edit taxonomy"
@@ -773,12 +825,14 @@ nb-NO:
   total: Total
   tracking: Sporing
   transaction: Transaksjon
+  transactions: Transactions
   tree: Tre
   try_again: "Forsøk på nytt"
   type: Type
   unable_ship_method: "Unable to generate shipping methods due to a server error."
   unable_to_authorize_credit_card: "Kunne ikke autorisere kredittkortet"
   unable_to_capture_credit_card: "Kunne ikke lagre kortopplysningene"
+  unable_to_connect_to_gateway: "Unable to connect to gateway."
   unable_to_save_order: "Kunne ikke lagre ordren"
   under_paid: "Under Paid"
   unrecognized_card_type: Unrecognized card type
@@ -795,11 +849,16 @@ nb-NO:
   user_created_successfully: "User created successfully"
   user_details: "Brukeropplysninger"
   users: Brukere
+  validation:  
+    is_too_large: "is too large -- stock on hand cannot cover requested quantity!"
+    must_be_int: "must be an integer"
+    must_be_non_negative: "must be a non-negative value"
   value: Verdi
   variants: Varianter
   vat: "VAT"           
   version: Versjon
   view_shipping_options: "View shipping options"
+  void: Void
   website: Nettsted
   weight: Vekt
   welcome_to_sample_store: "Velkommen til eksempelbutikken"
