@@ -1,4 +1,4 @@
-module Clear2pay
+module Spree::Clear2Pay
   # include ActiveMerchant::Billing
   
   
