@@ -39,6 +39,11 @@ class Admin::OrdersController < Admin::BaseController
 
   private
 
+  def object
+    @object ||= Order.find_by_number(params[:id], :include => :adjustments) if params[:id]
+    return @object || find_order
+  end
+
   def collection
     @search = Order.searchlogic(params[:search])
     @search.order ||= "descend_by_created_at"
@@ -51,7 +56,7 @@ class Admin::OrdersController < Admin::BaseController
       @search.completed_at_not_null = true
     end
 
-    @collection = @search.paginate(:include  => [:user, :shipments, {:creditcard_payments => :creditcard}],
+    @collection = @search.paginate(:include  => [:user, :shipments, :payments],
                                    :per_page => Spree::Config[:orders_per_page],
                                    :page     => params[:page])
   end
