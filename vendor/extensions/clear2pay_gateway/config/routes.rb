@@ -4,9 +4,9 @@
 #   admin.resources :whatever
 # end  
 
-# map.resources :orders do |order|
-#   order.resource :checkout, :member => {:paypal_checkout => :any, :paypal_payment => :any, :paypal_confirm => :any, :paypal_finish => :any}
-# end
+map.resources :orders do |order|
+  order.resource :checkout, :member => {:clearpay_payment => :any, :payment_failure => :any, :payment_success => :any}
+end
 # 
 # map.resources :paypal_express_callbacks, :only => [:index]
 # 

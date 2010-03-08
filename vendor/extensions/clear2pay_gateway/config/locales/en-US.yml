@@ -4,5 +4,6 @@ en-US:
   redirect_success: Success Redirect URL
   redirect_fail: Failure Redirect URL
   cpid: CPID
+  language: Language
   checkout_steps:
     clearpay: Payment
