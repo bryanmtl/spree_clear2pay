@@ -8,7 +8,7 @@ class Clear2payGatewayExtension < Spree::Extension
 
   def activate
     
-    BillingIntegration::Clear2Pay.register
+    BillingIntegration::ClearPay.register
         
     # AppConfiguration.class_eval do
     #       preference :enable_clear2pay, :boolean, :default => true
@@ -17,7 +17,7 @@ class Clear2payGatewayExtension < Spree::Extension
     
     # inject paypal code into orders controller
     CheckoutsController.class_eval do
-      include Spree::Clear2Pay
+      include Spree::ClearPay
     end
 
     # probably not needed once the payments mech is generalised

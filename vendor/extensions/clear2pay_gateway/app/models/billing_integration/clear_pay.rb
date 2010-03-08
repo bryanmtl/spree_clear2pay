@@ -1,4 +1,4 @@
-class BillingIntegration::Clear2Pay < BillingIntegration
+class BillingIntegration::ClearPay < BillingIntegration
   
   preference :cpid, :string
 	# preference :password, :password
