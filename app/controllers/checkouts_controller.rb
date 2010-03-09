@@ -80,8 +80,10 @@ class CheckoutsController < Spree::BaseController
   def object_params
     # For payment step, filter checkout parameters to produce the expected nested attributes for a single payment and its source, discarding attributes for payment methods other than the one selected
     if object.payment?
-      if source_params = params.delete(:payment_source)[params[:checkout][:payments_attributes].first[:payment_method_id].underscore]
-        params[:checkout][:payments_attributes].first[:source_attributes] = source_params
+      if params[:payment_source]
+        if source_params = params.delete(:payment_source)[params[:checkout][:payments_attributes].first[:payment_method_id].underscore]
+          params[:checkout][:payments_attributes].first[:source_attributes] = source_params
+        end
       end
       params[:checkout][:payments_attributes].first[:amount] = @order.total
     end

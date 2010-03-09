@@ -3,18 +3,13 @@
 
 class Clear2payGatewayExtension < Spree::Extension
   version "1.0"
-  description "Integration with Clear2Pay gateway. Intercepts standard checkout step."
+  description "Integration with Clear2Pay gateway. Added as a payment method"
   url "http://github.com/bryanmtl/clear2pay_gateway"
 
   def activate
     
-    BillingIntegration::ClearPay.register
+    PaymentMethod::ClearPay.register    
         
-    # AppConfiguration.class_eval do
-    #       preference :enable_clear2pay, :boolean, :default => true
-    #       preference :address_requires_state, :boolean, :default => true
-    #     end
-    
     # inject paypal code into orders controller
     CheckoutsController.class_eval do
       include Spree::ClearPay
