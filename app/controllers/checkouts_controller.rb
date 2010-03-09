@@ -17,7 +17,7 @@ class CheckoutsController < Spree::BaseController
   # GET /checkout is invalid but we'll assume a bookmark or user error and just redirect to edit (assuming checkout is still in progress)
   show.wants.html { redirect_to edit_object_url }
 
-  edit.before :edit_hooks, :set_user
+  edit.before :edit_hooks
   delivery.edit_hook :load_available_methods
   address.edit_hook :set_ip_address
   payment.edit_hook :load_available_payment_methods
@@ -32,7 +32,8 @@ class CheckoutsController < Spree::BaseController
     # call the edit hooks for the current step in case we experience validation failure and need to edit again
     edit_hooks
     @checkout.enable_validation_group(@checkout.state.to_sym)
-
+    @prev_state = @checkout.state
+    
     before :update
 
     begin
@@ -208,13 +209,6 @@ class CheckoutsController < Spree::BaseController
     redirect_to register_order_checkout_url(parent_object)
   end
 
-  def set_user
-    if object.order.user.nil? && current_user
-      object.order.user = current_user
-      object.order.save
-    end
-  end
-  
   def accurate_title
     I18n.t(:checkout)
   end
