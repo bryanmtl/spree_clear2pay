@@ -78,13 +78,12 @@ class OrdersController < Spree::BaseController
   end
   
   def set_user
-    if @order and @order.user != current_user
+    if @order && @order.user != current_user
       if @order.checkout 
         @order.checkout.update_attribute(:email, current_user && current_user.email)
       end
       @order.update_attribute(:user, current_user)
     end
-
   end
   
   def accurate_title
