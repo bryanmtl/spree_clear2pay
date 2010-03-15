@@ -5,6 +5,8 @@ class PaymentMethod::ClearPay < PaymentMethod
 	preference :currency_code, :string
 	preference :language, :string
   
-  # visa 4000 0000 0000 0002
+  # visa 4000 0000 0000 0002 - test visa number
+  # Validation Code: 123
+  # Any future date
   
 end

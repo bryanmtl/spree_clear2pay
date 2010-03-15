@@ -1,11 +1,13 @@
 = Clear2pay Gateway
 
-Here are the test account details:
+Clear2Pay Payment Gateway Extension
 
-Login: infinitize.admin@clear2pay.com
-PWD : 465d4Ez?76
-
-url: https://clearpark.testarea.tectrade.net/scripts/corporate/login.asp . That gives you access to what is called a "Merchant Front Office" (Virtual Terminal).
-
-Your CPID for Testing Area is 72E5FD20-E6CF-4893-ADAB-5CFBC81F5EB5
+- Integrates as a payment method in Spree
+- Allows for credit card processing in a similar fashion to Paypal Standard
+- To configure, select the ClearPay payment method and provide the following:
+  1. URL (there is a test and live URL for payment submissions)
+  2. Language (default is EN)
+  3. CPID (provided to you by Clear Park)
+  4. Currency Code ("EUR" for example)
+- For more information or to sign up for an account, visit www.clearpark.net
 

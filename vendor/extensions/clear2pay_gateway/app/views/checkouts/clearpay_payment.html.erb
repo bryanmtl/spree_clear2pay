@@ -1,7 +1,8 @@
 <fieldset id='payment' style="width:70%;">
 <% payment_method = @gateway %>
 <% form_tag @gateway.preferred_url do -%>
-Credit Card Payment
+<h2><%= t('clearpay_payment') %></h2>
+<p><%= t('clearpay_instuctional_text') %></p>
 	<%= hidden_field_tag 'CPID', payment_method.preferred_cpid %>
 	<%= hidden_field_tag 'ORDID', @order.number %>
 	<%= hidden_field_tag 'CURCODE', payment_method.preferred_currency_code %>
@@ -18,7 +19,7 @@ Credit Card Payment
 	<%= hidden_field_tag 'LANG', payment_method.preferred_language %>
 	<%= hidden_field_tag 'PAYMENTSELECTION', 'CreditCard' %>
 
-	<input type="submit" value="Click here to pay!" />
+	<%= submit_tag t('clearpay_submit') %>
 <% end %>
 
 

@@ -15,17 +15,5 @@ class Clear2payGatewayExtension < Spree::Extension
       include Spree::ClearPay
     end
 
-    # probably not needed once the payments mech is generalised
-    # Order.class_eval do
-    #       has_many :clear_2_pay_payments
-    #     end
-
-    
-    
-    # make your helper avaliable in all views
-    Spree::BaseController.class_eval do
-        # helper YourHelper
-        
-    end
   end
 end
