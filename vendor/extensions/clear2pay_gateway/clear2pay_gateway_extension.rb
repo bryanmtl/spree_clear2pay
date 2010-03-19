@@ -14,6 +14,15 @@ class Clear2payGatewayExtension < Spree::Extension
     CheckoutsController.class_eval do
       include Spree::ClearPay
     end
+    
+    Creditcard.class_eval do
+      
+      def process!(payment)
+        return true
+      end
+      
+    end
+    
 
   end
 end
