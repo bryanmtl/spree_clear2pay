@@ -7,6 +7,7 @@ en-US:
   redirect_success: Success Redirect URL
   redirect_fail: Failure Redirect URL
   cpid: CPID
+  security_token: Security Token
   language: Language
   checkout_steps:
     clearpay: Payment
