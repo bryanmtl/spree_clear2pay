@@ -24,8 +24,6 @@ class CheckoutsController < Spree::BaseController
   payment.edit_hook :load_available_payment_methods
   update.before :clear_payments_if_in_payment_state
 
-
-
   # customized verison of the standard r_c update method (since we need to handle gateway errors, etc)
   def update
     load_object
